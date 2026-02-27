@@ -1,0 +1,47 @@
+{
+  "name": "pismoszytenamiare-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for PismoSzyteNaMiare (pismoszytenamiare.pl) — use PismoSzyteNaMiare from Claude, Cursor, and any MCP-compatible AI assistant. No API key required.",
+  "main": "dist/index.js",
+  "bin": {
+    "pismoszytenamiare-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && cp -r src/public dist/public",
+    "start": "node dist/http.js",
+    "dev": "tsx watch src/http.ts",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pismoszytenamiare",
+    "ai",
+    "claude",
+    "softvoyagers"
+  ],
+  "license": "MIT",
+  "author": "SoftVoyagers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/softvoyagers/pismoszytenamiare-api-mcp"
+  },
+  "homepage": "https://pismoszytenamiare.pl",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.25.0",
+    "express": "^5.0.1",
+    "cors": "^2.8.5",
+    "applicationinsights": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/express": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
